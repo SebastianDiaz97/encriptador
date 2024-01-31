@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="contenedor">
+      <img class="logo logo-movil" src="img/Logo.png" alt="Logo" />
+      <form class="traductor">
+        <textarea
+          id="texto"
+          cols="30"
+          rows="10"
+          placeholder="Ingrese el texto aqui"
+          required
+        ></textarea>
+        <p class="info">
+          <span class="exclamacion">!</span>Solo letras minúsculas y sin acentos
+        </p>
+        <section class="botones">
+          <button class="encriptar">Encriptar</button>
+          <button class="desencriptar">Desencriptar</button>
+        </section>
+      </form>
+      <section class="mensajes">
+        <img class="muñeco" src="img/Muñeco.png" alt="Muñeco" />
+        <h2>Ningún mensaje fue encontrado</h2>
+        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+      </section>
+    </main>
+
+
+    <div id="IrVentanaFlotante" class="modal">
+        <div class="ventana">
+          <a href="#" style='text-decoration:none;' >
+          </a>
+          <h2>Mensaje copiado</h2>
+        </div>  
+      </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

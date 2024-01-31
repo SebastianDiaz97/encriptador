@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f5fc;
+  font-family: "Inter", sans-serif !important;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.contenedor {
+  position: relative;
+  max-width: 1440px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 80px;
+}
+
+/* traductor */
+
+.traductor {
+  width: 680px;
+  max-width: 680px;
+  margin-top: 128px;
+  margin-left: 2.5%;
+}
+
+#texto {
+  width: 100%;
+  background-color: #f3f5fc;
+  border: 0px;
+  font-size: 32px;
+  color: #0a3871;
+  font-family: inherit;
+  resize: none;
+  height: calc(70vh - 128px);
+}
+#texto::placeholder {
+  color: #0a3871;
+}
+
+#texto:focus {
+  outline: none;
+}
+
+.exclamacion {
+  background-color: #495057;
+  color: white;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.info {
+  color: #495057;
+}
+
+.botones {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  line-height: 19.36px;
+  height: 67px;
+  border-radius: 20px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.encriptar {
+  background-color: #0a3871;
+  color: white;
+  border: 1px solid #0a3871;
+}
+
+.desencriptar {
+  background-color: transparent;
+  color: #0a3871;
+  border: 1px solid #0a3871;
+}
+
+/* mensajes */
+
+.mensajes {
+  width: 400px;
+  min-height: 90vh;
+  background-color: white;
+  box-shadow: 0px 24px 32px -8px #00000014;
+  border-radius: 32px;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 2.5%;
+}
+
+.mensajes h2 {
+  color: #343a40;
+  line-height: 28.8px;
+  font-weight: 700;
+}
+.mensajes p {
+  color: #495057;
+  line-height: 24px;
+}
+
+.muñeco {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.boton-copiar {
+  background-color: white;
+  color: #0a3871;
+  border: 1px solid #0a3871;
+}
+
+.caja {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.parrafo {
+  margin-bottom: 30px;
+  text-align: start;
+  width: 100%;
+  /* white-space: wrap; */
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: initial;
+  padding: 1px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .contenedor {
+    flex-direction: column;
+  }
+  .muñeco {
+    display: none;
+  }
+  .mensajes {
+    width: 100%;
+    min-height: auto;
+  }
+  .traductor {
+    max-width: 100%;
+    width: auto;
+  }
+  body {
+    margin: 40px;
+  }
+  .logo {
+    top: 0;
+    left: -40px;
+  }
+  .mensajes {
+    margin: auto;
+    display: inline;
+  }
+  #texto {
+    height: calc(60vh - 128px);
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    margin: 24px;
+  }
+
+  .botones {
+    flex-direction: column;
+  }
+  .traductor {
+    margin-top: 90px;
+  }
+
+  #texto {
+    height: calc(50vh - 128px);
+  }
+}
+
+.ventana {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 300px;
+  padding: 10px 20px;
+  margin: 20% auto;
+  position: relative;
+}
+.modal {
+  /* background-color: rgba(0,0,0,.8); */
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s;
+}
